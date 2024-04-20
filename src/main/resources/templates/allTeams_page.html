@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Add Teams</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Team Schedules</h1>
+				</div>
+			</div>
+			<div class = "row">
+				<div class="col-md-6">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>League</th>
+								<th>Conference</th>
+								<th>Network</th>
+								<th>Date</th>
+								<th>Time</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr th:if="${teams.empty}">
+							<td colspan="2">No Teams Available</td>
+						</tr>
+						<tr th:each="team : ${teams}">
+							<td><span th:text="${teams.name}">Name</span></td>
+							<td><span th:text="${teams.league}">League</span></td>
+							<td><span th:text="${teams.conference}">Conference</span></td>
+							<td><span th:text="${teams.network}">Network</span></td>
+							<td><span th:text="${teams.start}">Start</span></td>
+							<td><span th:text="${teams.time}">Time</span></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="col-md-6">
+					<a class="btn btn-success" href="#" th:href="@{/personal}">Home Page</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>
