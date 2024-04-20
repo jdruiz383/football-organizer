@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Add Team Form</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="form">
+		  <form method="post" action="/addTeam" th:object="${addTeamRequest}">
+		    <h2>Add New Team</h2>
+		    <div class="input-box">
+		      <i class="fa fa-user" aria-hidden="true"></i>
+		      <input type="text" name="name" placeholder="Team Name" required>
+		    </div>
+		    <div class="input-box">
+		      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+		      <input type="text" name="conference" placeholder="Team Conference">
+			</div>
+		    <div class="input-box">
+		      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+		      <input type="text" name="League" placeholder="Team League">
+		    </div>
+		    <div class="input-box">
+		      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+		      <input type="text" name="network" placeholder="Game Network">
+		    </div>
+		    <div class="input-box">
+		      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+		      <input type="date" name="Start" placeholder="Game Date">
+		    </div>
+		    <div class="input-box">
+		      <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+		      <input type="time" name="time" placeholder="Game Time">
+		    </div>
+		    <div class="input-box">
+		      <input type="submit" name="add" value="Add Team">
+		    </div>
+		    <a href="/personal">Navigate to Home</a>
+		  </form>
+		</div>
+	</body>
+</html>
